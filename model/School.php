@@ -1,5 +1,5 @@
 <?php
-require('../../__CONNECT/wmi-connect.php');
+// require('../../__CONNECT/wmi-connect.php');
 class School
 {
   public $connection;
@@ -23,11 +23,11 @@ class School
   }
   public function create_table()
   {
-    include('../assets/sql/create_schools_table.php');
+    include('../../assets/sql/create_schools_table.php');
   }
   public function get_all()
   {
-    include('../assets/sql/get_all_schools.php');
+    include('../../assets/sql/get_all_schools.php');
     if($result){
       return $this->get_data($result);
     }
@@ -119,5 +119,4 @@ public function insert_data()
     return $result = mysqli_query($this->connection, $sql);
   }
 }
-
 ?>
